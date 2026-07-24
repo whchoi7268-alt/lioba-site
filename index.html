@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>리오바 뷰티 (LIOBA) | 금천구 시흥동 얼굴 윤곽·피부 관리</title>
+<meta name="description" content="금천구 시흥동 1:1 맞춤 관리샵 리오바 뷰티. 비수술 얼굴 윤곽·리프팅, 문제성 피부 케어. 시흥대로 143 신라상가 112호.">
+<style>
+  :root{
+    --bg:#faf6f2; --ink:#3a3230; --sub:#7a6f68; --line:#ece2d9;
+    --rose:#b98a7a; --rose-d:#a2705f; --gold:#c9a86a; --card:#ffffff;
+    --shadow:0 14px 40px rgba(120,90,75,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .serif{font-family:'Nanum Myeongjo','Apple SD Gothic Neo',serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(250,246,242,.86);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-size:22px;font-weight:800;letter-spacing:.14em;color:var(--rose-d)}
+  .brand small{display:block;font-size:9.5px;letter-spacing:.34em;color:var(--sub);font-weight:600;margin-top:2px}
+  .menu{display:flex;gap:26px;font-size:14px;color:var(--sub);font-weight:600}
+  .menu a:hover{color:var(--rose-d)}
+  .callbtn{background:var(--rose-d);color:#fff;padding:9px 18px;border-radius:999px;font-size:13px;font-weight:700}
+  @media(max-width:720px){.menu{display:none}}
+
+  /* hero */
+  .hero{position:relative;text-align:center;padding:96px 0 92px;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;
+    background:radial-gradient(1100px 460px at 50% -12%,#f4e6dc 0%,rgba(244,230,220,0) 62%)}
+  .hero>*{position:relative}
+  .eyebrow{display:inline-block;letter-spacing:.30em;font-size:12px;font-weight:700;
+    color:var(--gold);border:1px solid #e6d6bd;padding:7px 16px;border-radius:999px;background:#fffdf8}
+  .hero h1{font-size:clamp(30px,6vw,52px);font-weight:800;line-height:1.28;margin:24px 0 14px}
+  .hero h1 .hl{color:var(--rose-d)}
+  .hero p.lead{font-size:clamp(15px,2.4vw,18px);color:var(--sub);max-width:600px;margin:0 auto}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .btn{padding:15px 30px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s;display:inline-flex;align-items:center;gap:8px}
+  .btn-p{background:var(--rose-d);color:#fff;box-shadow:0 10px 24px rgba(162,112,95,.30)}
+  .btn-p:hover{background:#8f5f4f;transform:translateY(-2px)}
+  .btn-o{background:#fff;color:var(--rose-d);border:1.5px solid #e3cfc4}
+  .btn-o:hover{border-color:var(--rose-d)}
+  .trust{margin-top:30px;font-size:13px;color:var(--sub);letter-spacing:.02em}
+  .trust b{color:var(--rose-d)}
+
+  section{padding:76px 0}
+  .kicker{text-align:center;letter-spacing:.26em;font-size:12px;font-weight:700;color:var(--gold)}
+  .h2{text-align:center;font-size:clamp(24px,4vw,34px);font-weight:800;margin:12px 0 8px}
+  .subtitle{text-align:center;color:var(--sub);max-width:640px;margin:0 auto 46px}
+
+  /* about */
+  .about{background:#fff}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+  .about-card{background:linear-gradient(155deg,#f7ece4,#efe0d4);border-radius:24px;
+    padding:44px;min-height:250px;display:flex;flex-direction:column;justify-content:center;gap:14px;box-shadow:var(--shadow)}
+  .about-card .big{font-size:40px}
+  .about-card h3{font-size:22px;font-weight:800}
+  .about-card p{color:#6a5a52}
+  .about-txt h2{font-size:28px;font-weight:800;line-height:1.4;margin-bottom:18px}
+  .about-txt h2 .hl{color:var(--rose-d)}
+  .about-txt p{color:var(--sub);margin-bottom:14px}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:26px}}
+
+  /* services */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 28px;
+    transition:.25s;box-shadow:0 6px 18px rgba(120,90,75,.05)}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#e3cfc4}
+  .ic{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+    font-size:26px;background:#f6ebe3;margin-bottom:18px}
+  .card h3{font-size:19px;font-weight:800;margin-bottom:8px}
+  .card p{color:var(--sub);font-size:14.5px}
+  .card .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:11.5px;color:var(--rose-d);background:#f8efe9;border:1px solid #eeddd3;padding:4px 10px;border-radius:999px;font-weight:600}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+
+  /* why */
+  .why{background:#fff}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .why-item{text-align:center;padding:20px}
+  .why-num{font-size:15px;font-weight:800;color:#fff;background:var(--rose-d);width:40px;height:40px;
+    border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+  .why-item h3{font-size:18px;font-weight:800;margin-bottom:8px}
+  .why-item p{color:var(--sub);font-size:14.5px}
+  @media(max-width:760px){.why-grid{grid-template-columns:1fr;gap:8px}}
+
+  /* location */
+  .loc{background:linear-gradient(160deg,#f7ece4,#f2e2d6)}
+  .loc-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .info-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #e7d6ca}
+  .info-row:last-child{border-bottom:none}
+  .info-row .lab{font-weight:800;min-width:74px;color:var(--rose-d)}
+  .info-row .val{color:#5f504a}
+  .info-row a.val{color:var(--rose-d);font-weight:700}
+  .loc-card{background:#fff;border-radius:22px;padding:34px;box-shadow:var(--shadow);text-align:center}
+  .loc-card .price{font-size:15px;color:var(--sub);margin-bottom:6px}
+  .loc-card .free{font-size:26px;font-weight:800;color:var(--rose-d);margin-bottom:18px}
+  .loc-card .btn{width:100%;justify-content:center;margin-top:8px}
+  .map-wrap{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:5px solid #fff;line-height:0;margin-bottom:18px}
+  .map-wrap iframe{width:100%;height:380px;border:0;display:block;filter:saturate(.96)}
+  .maplinks{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+  .maplink{background:#fff;border:1.5px solid #e3cfc4;color:var(--rose-d);font-weight:700;
+    font-size:14px;padding:11px 20px;border-radius:999px;transition:.2s}
+  .maplink:hover{border-color:var(--rose-d);transform:translateY(-2px)}
+  .maplink.nv{background:#03c75a;border-color:#03c75a;color:#fff}
+  .maplink.nv:hover{background:#02b350}
+  @media(max-width:760px){.loc-grid{grid-template-columns:1fr;gap:26px}.map-wrap iframe{height:300px}}
+
+  footer{background:#efe4dc;color:#6a5a52;padding:40px 0;text-align:center;font-size:13px}
+  footer .fb{font-size:19px;font-weight:800;letter-spacing:.12em;color:var(--rose-d);margin-bottom:8px}
+  .disc{margin-top:14px;font-size:11.5px;color:#9a8b82;line-height:1.6}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--rose-d);color:#fff;
+    padding:14px 22px;border-radius:999px;font-weight:800;box-shadow:0 10px 26px rgba(162,112,95,.4);font-size:15px}
+  .float:hover{background:#8f5f4f}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">LIOBA<small>리오바 뷰티</small></div>
+    <nav class="menu">
+      <a href="#about">소개</a>
+      <a href="#service">관리 프로그램</a>
+      <a href="#why">왜 리오바</a>
+      <a href="#location">오시는 길</a>
+    </nav>
+    <a href="tel:0264092862" class="callbtn">☎ 02-6409-2862</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">GEUMCHEON · SIHEUNG</span>
+    <h1 class="serif">칼 안 대고,<br><span class="hl">얼굴선이 사는 곳</span></h1>
+    <p class="lead">금천구 시흥동 1:1 맞춤 관리샵 리오바 뷰티.<br>
+      얼굴형·피부 상태·생활습관까지 살펴 가장 잘 어울리는 아름다움을 찾아드립니다.</p>
+    <div class="cta">
+      <a href="tel:0264092862" class="btn btn-p">☎ 전화 상담·예약</a>
+      <a href="#location" class="btn btn-o">오시는 길 보기</a>
+    </div>
+    <p class="trust">비수술 얼굴 윤곽 · 리프팅 · 문제성 피부 &nbsp;|&nbsp; <b>첫 방문 무료 얼굴형·피부 진단</b></p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div class="about-txt">
+      <span class="kicker" style="text-align:left;display:block">ABOUT LIOBA</span>
+      <h2>단순 피부관리가 아닌,<br><span class="hl">1:1 맞춤 설계</span></h2>
+      <p>리오바 뷰티는 얼굴 윤곽관리와 문제성 피부를 전문으로 하는 1:1 맞춤 스킨케어샵입니다.
+        똑같은 관리를 모두에게 적용하지 않습니다.</p>
+      <p>고객님의 <b>얼굴형, 피부 상태, 생활 습관</b>까지 꼼꼼히 살펴,
+        지금 가장 필요한 관리를 함께 설계해 드립니다. 시흥동에서 조용히 단골이 이어지는 이유입니다.</p>
+    </div>
+    <div class="about-card">
+      <div class="big">🌿</div>
+      <h3 class="serif">나에게 꼭 맞춘 관리</h3>
+      <p>얼굴형 진단 → 맞춤 설계 → 관리 → 홈케어 가이드까지, 결과를 함께 만들어 갑니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section id="service">
+  <div class="wrap">
+    <div class="kicker">SIGNATURE CARE</div>
+    <div class="h2 serif">리오바 시그니처 관리</div>
+    <p class="subtitle">고민에 맞춰 골라 받는 전문 관리 라인. 첫 방문 시 진단 후 함께 정합니다.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="ic">💠</div>
+        <h3>얼굴 윤곽 관리</h3>
+        <p>볼살·턱선이 고민이라면. 비수술로 얼굴선을 또렷하게 정리하는 리오바의 대표 관리.</p>
+        <div class="tags"><span class="tag">#볼살관리</span><span class="tag">#턱선정리</span><span class="tag">#얼굴선</span></div>
+      </div>
+      <div class="card">
+        <div class="ic">✨</div>
+        <h3>탄력·리프팅 관리</h3>
+        <p>처지고 늘어진 피부에 탄력을. 얼굴에 생기와 화사함을 더하는 집중 케어.</p>
+        <div class="tags"><span class="tag">#리프팅</span><span class="tag">#탄력</span><span class="tag">#안티에이징</span></div>
+      </div>
+      <div class="card">
+        <div class="ic">🌸</div>
+        <h3>문제성 피부 케어</h3>
+        <p>트러블·예민함으로 지쳤다면. 피부 결과 컨디션을 근본부터 돌보는 맞춤 관리.</p>
+        <div class="tags"><span class="tag">#트러블</span><span class="tag">#진정</span><span class="tag">#피부결</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="kicker">WHY LIOBA</div>
+    <div class="h2 serif">리오바를 선택하는 이유</div>
+    <p class="subtitle">"동네에서 조용히 단골이 이어지는" 관리샵에는 이유가 있습니다.</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">1</div>
+        <h3>1:1 완전 맞춤</h3>
+        <p>얼굴형·피부·습관까지 보고 나에게 맞춘 관리를 설계합니다.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">2</div>
+        <h3>윤곽 전문성</h3>
+        <p>비수술 얼굴 윤곽·리프팅에 집중한 전문 관리 노하우.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">3</div>
+        <h3>편안한 동네 접근성</h3>
+        <p>시흥대로변 1층, 저녁 8시까지 운영으로 퇴근 후에도 부담 없이.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location" class="loc">
+  <div class="wrap">
+    <div class="kicker">VISIT US</div>
+    <div class="h2 serif">오시는 길 · 예약</div>
+    <p class="subtitle">전화 한 통이면 상담과 예약이 끝납니다. 부담 없이 문의 주세요.</p>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EA%B8%88%EC%B2%9C%EA%B5%AC%20%EC%8B%9C%ED%9D%A5%EB%8C%80%EB%A1%9C%20143&z=17&hl=ko&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="리오바 뷰티 위치 - 서울 금천구 시흥대로 143 신라상가"></iframe>
+    </div>
+    <div class="maplinks">
+      <a class="maplink nv" href="https://map.naver.com/p/entry/place/1803543250" target="_blank" rel="noopener">🧭 네이버 지도 길찾기</a>
+      <a class="maplink" href="https://map.kakao.com/?q=%EC%84%9C%EC%9A%B8%20%EA%B8%88%EC%B2%9C%EA%B5%AC%20%EC%8B%9C%ED%9D%A5%EB%8C%80%EB%A1%9C%20143" target="_blank" rel="noopener">카카오맵으로 보기</a>
+    </div>
+    <div class="loc-grid">
+      <div>
+        <div class="info-row"><span class="lab">상호</span><span class="val">리오바 뷰티 (LIOBA) · 피부/체형관리</span></div>
+        <div class="info-row"><span class="lab">주소</span><span class="val">서울 금천구 시흥대로 143 신라상가 112호</span></div>
+        <div class="info-row"><span class="lab">전화</span><a href="tel:0264092862" class="val">02-6409-2862</a></div>
+        <div class="info-row"><span class="lab">영업</span><span class="val">매일 ~ 저녁 8시 (20:00) &nbsp;·&nbsp; 예약제 운영</span></div>
+        <div class="info-row"><span class="lab">지역</span><span class="val">시흥1동 · 시흥대로변 · 주차 문의</span></div>
+      </div>
+      <div class="loc-card">
+        <div class="price">첫 방문 고객님께</div>
+        <div class="free serif">무료 얼굴형·피부 진단</div>
+        <p style="color:var(--sub);font-size:14px">지금 전화 주시면 오늘 예약 가능한<br>시간을 바로 안내해 드립니다.</p>
+        <a href="tel:0264092862" class="btn btn-p">☎ 02-6409-2862 전화하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fb">LIOBA · 리오바 뷰티</div>
+    <div>서울 금천구 시흥대로 143 신라상가 112호 &nbsp;|&nbsp; 02-6409-2862 &nbsp;|&nbsp; 매일 ~20:00</div>
+    <div class="disc">※ 리오바 뷰티는 피부·체형 관리 서비스를 제공하는 에스테틱 샵이며, 의료행위를 하지 않습니다.
+      관리 효과는 개인의 피부 상태와 생활 습관에 따라 차이가 있을 수 있습니다.</div>
+  </div>
+</footer>
+
+<a href="tel:0264092862" class="float">☎ 예약 문의</a>
+
+</body>
+</html>
